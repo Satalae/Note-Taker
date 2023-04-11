@@ -18,7 +18,7 @@ const writeToFile = (destination, content) =>
         err ? console.error(err) : console.info('\nD')  
     );
 
-/**
+ /**
  * @param {object} content
  * @param {string} file
  * @returns {void}
@@ -36,5 +36,7 @@ const readAndAppend = (content, file) => {
         }
     });
 };
+
+
 
 module.exports = { readFromFile, writeToFile, readAndAppend };
