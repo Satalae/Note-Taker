@@ -15,14 +15,13 @@ const readFromFile = util.promisify(fs.readFile);
 
 const writeToFile = (destination, content) =>
     fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
-        err ? console.error(err) : console.info('\nD')  
+        err ? console.error(err) : console.info('File Written Successfully!\n')  
     );
 
  /**
  * @param {object} content
  * @param {string} file
  * @returns {void}
- * 
  */
 
 const readAndAppend = (content, file) => {
@@ -37,6 +36,28 @@ const readAndAppend = (content, file) => {
     });
 };
 
+/**
+ * @param {object} content 
+ * @param {string} file
+ * @returns {void} 
+ */
 
+const readAndDelete = (content, file) => {
+    fs.readFile(file, 'utf8', (err, data) => {
+        if(err) {
+            console.error(err);
+        } else{
+            //Takes and parses the json list into a usable const
+            const parsedData = JSON.parse(data);
+            console.log(parsedData);
 
-module.exports = { readFromFile, writeToFile, readAndAppend };
+            //Filters out the note
+            const filteredData = parsedData.filter((note) => 
+            note.id != content);
+            //Returns that new list
+            writeToFile(file, filteredData);
+        }
+    });
+};
+
+module.exports = { readFromFile, writeToFile, readAndAppend, readAndDelete };

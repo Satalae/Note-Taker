@@ -1,12 +1,7 @@
 [
     {
-        "title": "Dog",
-        "text": "Barking",
-        "id": "caa3038e-54c5-4070-86e5-1a5091e301e9"
-    },
-    {
         "title": "Cat",
-        "text": "Meowing\n",
-        "id": "d1213730-7373-4d1c-812c-2aa4bb7aa09c"
+        "text": "Meowing",
+        "id": "c26ac841-20b8-45d6-b7c6-653bd3462d0e"
     }
 ]
