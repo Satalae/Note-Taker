@@ -6,7 +6,7 @@ This is a program that allows you to keep track of multiple notes with descripti
 ## Usage
 To use this, simply go to the link below and you should have a note taker website ready to take notes!  
 
-Doglink
+https://harrison-note-taker.herokuapp.com/
 
 ## Contribution 
 Github: https://github.com/Satalae  
