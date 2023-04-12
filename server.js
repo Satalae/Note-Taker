@@ -6,7 +6,7 @@ const api = require('./routes/index.js');
 const app = express();
 
 // Heroku/Port
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 // Static Path to html/js
 app.use(express.static('public'));
